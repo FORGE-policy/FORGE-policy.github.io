@@ -1098,6 +1098,11 @@ body {
   color: #df5f67;
 }
 
+.failure-emphasis {
+  color: #df5f67;
+  font-weight: 800;
+}
+
 .label-forge {
   color: #00a650;
 }
