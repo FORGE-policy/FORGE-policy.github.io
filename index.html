@@ -1,1 +1,260 @@
-Anonymous project page for FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning">
+  <meta name="description" content="FORGE uses action-aware keypoint guidance to transfer tool-use functions to unseen tools.">
+  <meta name="keywords" content="FORGE, functional generalization, robotic tool use, keypoint trajectories, affordance, manipulation">
+  <meta name="author" content="Anonymous Authors">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1f6f78">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Anonymous Project Page">
+  <meta property="og:title" content="FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning">
+  <meta property="og:description" content="Action-aware keypoint guidance for functional tool-use generalization.">
+  <meta property="og:image" content="static/images/figures/teaser_v2-1.png">
+  <meta property="og:image:alt" content="FORGE teaser">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning">
+  <meta name="twitter:description" content="Action-aware keypoint guidance for functional tool-use generalization.">
+  <meta name="twitter:image" content="static/images/figures/teaser_v2-1.png">
+
+  <meta name="citation_title" content="FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning">
+  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_publication_date" content="2026">
+
+  <title>FORGE | Functional Tool-Use Generalization</title>
+
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="static/css/fontawesome.all.min.css"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header forge-hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h1 class="title is-1 publication-title">FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+          <div class="publication-links">
+            <span class="link-block"><a href="#problem" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-question-circle"></i></span><span>Problem</span></a></span>
+            <span class="link-block"><a href="#overview" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>Method</span></a></span>
+            <span class="link-block"><a href="#demos" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-play"></i></span><span>Demos</span></a></span>
+            <span class="link-block"><a href="#results" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-chart-bar"></i></span><span>Results</span></a></span>
+            <!-- <span class="link-block"><a href="#BibTeX" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-quote-right"></i></span><span>BibTex</span></a></span> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Research Problem</h2>
+            <p class="lead-text">
+              We define functional generalization as the ability to repurpose diverse tools to achieve the same function.
+              While humans can effortlessly adapt their actions across tools with different shapes and affordances, <strong style="color: #df5f67;">robots still struggle to transfer functional intent from perception to control.</strong>
+              <strong>FORGE</strong> addresses this challenge by learning <strong style="color: #1f5f8f;">functional intermediate representations</strong> that bridge visual understanding and grounded action, enabling robots to accomplish the same function with arbitrary tools.
+            </p>
+          </div>
+        </div>
+        <video class="main-video" autoplay controls muted loop playsinline preload="metadata">
+          <source src="static/videos/intro_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="section is-light" id="overview">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Overview of FORGE</h2>
+        <figure class="figure-block">
+          <img src="static/images/figures/main_pipeline-1.png" alt="FORGE method overview" loading="lazy">
+          <figcaption>
+            <strong>Overview of the FORGE.</strong> (a) Evaluation and selection of functional intermediate representations. (b) In Stage 1,
+            the System-2 planner learns to predict future keypoint-based functional plans from action-free observations. (c) In
+            Stage 2, the System-1 execution policy grounds the predicted functional plans into executable robot actions.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="demos">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Demos</h2>
+
+        <h3 class="demo-section-title">Simulation Demos</h3>
+
+        <h4 class="tool-demo-title">Scoop</h4>
+        <div class="demo-grid method-demo-grid">
+          <article><div class="video-card"><span class="method-label label-baseline">Baseline</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/scoop/baseline.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-atm">ATM</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/scoop/atm.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-forge">FORGE (ours)</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/scoop/ours.mp4" type="video/mp4"></video></div></article>
+        </div>
+
+        <h4 class="tool-demo-title">Shoe</h4>
+        <div class="demo-grid method-demo-grid">
+          <article><div class="video-card"><span class="method-label label-baseline">Baseline</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/shoe/baseline.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-atm">ATM</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/shoe/atm.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-forge">FORGE (ours)</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/shoe/ours.mp4" type="video/mp4"></video></div></article>
+        </div>
+
+        <h4 class="tool-demo-title">Book</h4>
+        <div class="demo-grid method-demo-grid">
+          <article><div class="video-card"><span class="method-label label-baseline">Baseline</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/book/baseline.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-atm">ATM</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/book/atm.mp4" type="video/mp4"></video></div></article>
+          <article><div class="video-card"><span class="method-label label-forge">FORGE (ours)</span><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/simulations/book/ours.mp4" type="video/mp4"></video></div></article>
+        </div>
+
+        <p class="demo-takeaway">
+          FM and ATM often fail to hit the target with the specified hitting points.<br>
+          FORGE succeeds more reliably with predicting keypoint trajectories.
+        </p>
+
+        <h3 class="demo-section-title">Real-World Demos</h3>
+        <div class="real-world-demos">
+          <article class="real-world-tool">
+            <h4>Tobject</h4>
+            <div class="tool-pattern-row">
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 1</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/tobject-1/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/tobject-1/ours.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 1 requires the policy to hit the target with the hammer-like head, the FM baseline incorrectly uses the handle to strike the target.</p>
+              </div>
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 2</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/tobject-2/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/tobject-2/ours.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 2 requires the policy to hit the target with the handle, the FM baseline misses the hit.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="real-world-tool">
+            <h4>Shoe</h4>
+            <div class="tool-pattern-row">
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 1</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/shoe-1/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/shoe-1/ours.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 1 requires the policy to hit the target with the front point of the shoe, the FM baseline misses the hit.</p>
+              </div>
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 2</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/shoe-2/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/shoe-2/our.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 2 requires the policy to hit the target with the rear point of the shoe, the FM baseline misses the hit.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="real-world-tool">
+            <h4>Book</h4>
+            <div class="tool-pattern-row">
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 1</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/book-1/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/book-1/our.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 1 requires the policy to hit the target with the bottom edge, the FM baseline fails to complete the downward motion.</p>
+              </div>
+              <div class="hitting-pattern">
+                <h5>Hitting Pattern 2</h5>
+                <div class="real-world-pair">
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/book-2/fm.mp4" type="video/mp4"></video><p class="method-caption caption-fm">FM</p></div>
+                  <div><video autoplay controls muted loop playsinline preload="metadata"><source src="static/videos/real-world/book-2/ours.mp4" type="video/mp4"></video><p class="method-caption caption-forge">FORGE (ours)</p></div>
+                </div>
+                <p class="pattern-note">Hitting Pattern 2 requires the policy to hit the target with the book spine, the FM baseline misses the hit.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-light" id="results">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <figure class="figure-block">
+          <img src="static/images/figures/experiments_settings-1.png" alt="Benchmark settings" loading="lazy">
+          <figcaption>
+            <strong>Simulation Benchmark and Real-world Setting.</strong> (a) The simulation benchmark contains seven tools, three initial
+            settings per tool, and randomized target and hitting points. (b) The real-world setting uses a Franka robot and
+            includes three tools, each with two hitting patterns.
+          </figcaption>
+        </figure>
+
+        <h3 class="demo-section-title">Simulation Results</h3>
+        <figure class="result-table-figure">
+          <img src="static/images/tables/simulation%20results.png" alt="Simulation results table" loading="lazy">
+          <figcaption>
+            We evaluate success rates on three unseen simulation tools, with each setting tested over 30 rollouts and reported at setting, tool, and overall levels.
+            FORGE achieves 0.36 overall SR, outperforming DP by more than 2x and showing that function-aware keypoint plans improve generalization beyond end-to-end or generic tracking baselines.
+          </figcaption>
+        </figure>
+
+        <h3 class="demo-section-title">Real-World Results</h3>
+        <figure class="result-table-figure">
+          <img src="static/images/tables/real-world%20results.png" alt="Additional real-world results table" loading="lazy">
+          <figcaption>
+            We train on three seen tools and evaluate on Tobject, Book, and Shoe, with two hitting patterns and 10 real-world rollouts per pattern for each unseen tool.
+            FORGE improves the overall success rate from 0.22 to 0.63 over FM, confirming that explicit functional plans help align the correct hitting region on novel real-world tools.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">Citation</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{anonymous2026forge,
+  title={FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning},
+  author={Anonymous Authors},
+  year={2026}
+}</code></pre>
+      </div>
+    </section> -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <p>This anonymous project page is prepared for conference review.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
